@@ -1,4 +1,5 @@
 import Advantages from "../component/home/Advantages";
+import CtaBanner from "../component/home/CtaBanner";
 import Faq from "../component/home/Faq";
 import Hero from "../component/home/Hero";
 import HowItWorks from "../component/home/HowItWorks";
@@ -22,6 +23,7 @@ function home() {
         <SocialGrowth />
         <Advantages />
         <Faq />
+        <CtaBanner />
       </main>
       <Footer />
     </div>
