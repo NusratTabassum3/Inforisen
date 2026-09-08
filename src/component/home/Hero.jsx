@@ -51,7 +51,7 @@ const Hero = () => {
               <Button
                 href={heroData.primaryBtnLink}
                 variant="primary"
-                className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 shadow-md"
+                className="bg-gradient-to-r from-[#FF9243] via-[#DD6017] to-[#983200] hover:from-orange-600 hover:to-orange-700 shadow-md"
               >
                 {heroData.primaryBtnText}
               </Button>

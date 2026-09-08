@@ -22,7 +22,7 @@ const Faq = () => {
         key={item.id}
         className={`rounded-2xl border transition-all duration-300 overflow-hidden ${
           isOpen
-            ? "bg-gradient-to-r from-orange-600 via-orange-500 to-amber-600 text-white border-orange-500 shadow-md"
+            ? "bg-gradient-to-r from-[#FF9243] via-[#DD6017] to-[#983200] text-white border-orange-500 shadow-md"
             : "bg-[#F5F5F5] text-gray-800 border-orange-200/60 hover:border-orange-300"
         }`}
       >

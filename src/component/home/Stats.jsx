@@ -3,7 +3,7 @@ import Container from "../common/Container";
 
 const Stats = () => {
   return (
-    <section className="py-8 bg-gradient-to-b from-orange-50/50 to-white">
+    <section className="py-8 bg-[#F9F9F9]">
       <Container>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {statsData.map((item) => (

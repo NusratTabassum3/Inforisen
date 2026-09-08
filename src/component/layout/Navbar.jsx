@@ -48,7 +48,7 @@ function Navbar() {
             Sign In
           </Button>
 
-          <Button className="rounded-xl bg-gradient-to-r from-orange-500 to-amber-700 px-5 py-2.5 text-xs font-semibold text-white shadow-md transition-all duration-200 hover:opacity-90 active:scale-95">
+          <Button className="rounded-xl bg-gradient-to-r from-[#FF9243] via-[#DD6017] to-[#983200] px-5 py-2.5 text-xs font-semibold text-white shadow-md transition-all duration-200 hover:opacity-90 active:scale-95">
             Sign Up
           </Button>
         </div>
@@ -97,7 +97,7 @@ function Navbar() {
               Sign In
             </Button>
 
-            <Button className="w-1/2 rounded-xl bg-gradient-to-r from-orange-500 to-amber-700 py-2.5 text-xs font-semibold text-white">
+            <Button className="w-1/2 rounded-xl bg-gradient-to-r from-[#FF9243] via-[#DD6017] to-[#983200] py-2.5 text-xs font-semibold text-white">
               Sign Up
             </Button>
           </div>

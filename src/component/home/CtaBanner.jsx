@@ -4,7 +4,6 @@ import Container from "../common/Container";
 
 // Assets Import
 import girlImage from "../../assets/images/cta/girl.png";
-//import worldMap from "../../assets/images/cta/world-map.png";
 
 const CtaBanner = () => {
   return (
@@ -12,18 +11,6 @@ const CtaBanner = () => {
       <Container>
         {/* Main Banner Card Box */}
         <div className="relative bg-[#FFF8F0] border border-orange-100/80 rounded-3xl p-6 sm:p-10 lg:p-12 overflow-hidden lg:overflow-visible">
-          {/* Background World Map Vector (Behind Text) */}
-          {/* <div className="absolute inset-0 flex items-center justify-center opacity-40 pointer-events-none z-0">
-            <img
-              src={worldMap}
-              alt="World Map"
-              className="w-full max-w-2xl h-auto object-contain"
-              onError={(e) => {
-                e.target.style.display = "none";
-              }}
-            />
-          </div> */}
-
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
             {/* Left Content (Text + Buttons) */}
             <div className="lg:col-span-8 max-w-xl">
@@ -47,19 +34,19 @@ const CtaBanner = () => {
 
                 <Button
                   variant="primary"
-                  className="bg-gradient-to-r from-orange-500 to-amber-700 text-white text-xs px-6 py-3 rounded-xl font-bold shadow-md hover:shadow-lg transition-all"
+                  className="bg-gradient-to-r from-[#FF9243] via-[#DD6017] to-[#983200] text-white text-xs px-6 py-3 rounded-xl font-bold shadow-md hover:shadow-lg transition-all"
                 >
                   {ctaData.btnPrimary}
                 </Button>
               </div>
             </div>
 
-            {/* Right Side Girl Image (Overlapping Outside Banner) */}
+            {/* Right Side Girl Image */}
             <div className="lg:col-span-4 flex justify-center lg:justify-end relative">
               <img
                 src={girlImage}
                 alt="Growth Consultant"
-                className="w-full max-w-[260px] sm:max-w-[300px] lg:max-w-[360px] h-auto object-contain lg:absolute lg:-bottom-12 lg:-top-16 lg:right-0 drop-shadow-md"
+                className="w-full max-w-[260px] sm:max-w-[280px] lg:max-w-[320px] h-auto object-contain lg:absolute lg:bottom-0 lg:right-2 lg:translate-y-40 drop-shadow-md"
                 onError={(e) => {
                   e.target.style.display = "none";
                 }}

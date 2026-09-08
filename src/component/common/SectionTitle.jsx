@@ -7,7 +7,6 @@ function SectionTitle({ eyebrow, title, highlight, description }) {
         </p>
       )}
 
-      {/* Advantage ডিজাইনের অরেঞ্জ লাইন ও ডট */}
       <div className="relative flex items-center justify-center w-16 h-1 mx-auto">
         <div className="w-full h-[1.5px] bg-orange-400" />
         <div className="absolute w-2 h-2 bg-orange-500 rounded-full border border-white" />

@@ -31,7 +31,7 @@ const Services = () => {
                 onClick={() => setActiveTab(tab.name)}
                 className={`py-2.5 px-3 rounded-xl text-xs font-semibold flex items-center justify-center space-x-2 border transition-all ${
                   isActive
-                    ? "bg-gradient-to-r from-orange-500 to-orange-600 text-white border-orange-500 shadow-md shadow-orange-500/20"
+                    ? "bg-gradient-to-r from-[#FF9243] via-[#DD6017] to-[#983200] text-white border-orange-500 shadow-md shadow-orange-500/20"
                     : "bg-orange-50/40 text-gray-700 border-orange-100 hover:bg-orange-100"
                 }`}
               >
@@ -73,27 +73,42 @@ const Services = () => {
                 {activeTab} marketing campaigns.
               </p>
 
-              {/* Bullet Features */}
+              {/* Bullet Features with Hexagon Badges & Leading Zeros */}
               <div className="space-y-3 mb-6">
-                {facebookFeatures.map((item) => (
-                  <div key={item.id} className="flex items-start space-x-2">
-                    <span className="bg-orange-500 text-white text-[10px] font-bold rounded-full w-4 h-4 flex items-center justify-center mt-0.5 shrink-0">
-                      {item.id}
-                    </span>
-                    <p className="text-xs text-gray-700">
-                      <strong className="text-orange-500 font-semibold">
-                        {item.title}{" "}
-                      </strong>
-                      <span className="text-gray-500">{item.desc}</span>
-                    </p>
-                  </div>
-                ))}
+                {facebookFeatures.map((item, index) => {
+                  const formattedNumber = String(item.id || index + 1).padStart(
+                    2,
+                    "0",
+                  );
+
+                  return (
+                    <div key={item.id} className="flex items-start space-x-3">
+                      {/* Hexagon Badge */}
+                      <span
+                        style={{
+                          clipPath:
+                            "polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)",
+                        }}
+                        className="bg-gradient-to-r from-[#FF9243] via-[#DD6017] to-[#983200] text-white text-[9px] font-bold w-6 h-7 flex items-center justify-center shrink-0 mt-0.5 shadow-sm"
+                      >
+                        {formattedNumber}
+                      </span>
+
+                      <p className="text-sm text-gray-700 leading-normal">
+                        <strong className="text-orange-500 font-medium">
+                          {item.title}{" "}
+                        </strong>
+                        <span className="text-gray-500">{item.desc}</span>
+                      </p>
+                    </div>
+                  );
+                })}
               </div>
 
               {/* Action Button */}
               <Button
                 variant="primary"
-                className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-xs px-5 py-2.5 rounded-lg shadow-sm"
+                className="bg-gradient-to-r from-[#FF9243] via-[#DD6017] to-[#983200] hover:opacity-90 text-xs px-5 py-2.5 rounded-lg shadow-sm text-white"
               >
                 View {activeTab} Services
               </Button>
