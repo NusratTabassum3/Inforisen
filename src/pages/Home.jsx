@@ -1,4 +1,5 @@
 import Advantages from "../component/home/Advantages";
+import Faq from "../component/home/Faq";
 import Hero from "../component/home/Hero";
 import HowItWorks from "../component/home/HowItWorks";
 import PaymentMethods from "../component/home/PaymentMethods";
@@ -20,6 +21,7 @@ function home() {
         <PaymentMethods />
         <SocialGrowth />
         <Advantages />
+        <Faq />
       </main>
       <Footer />
     </div>
