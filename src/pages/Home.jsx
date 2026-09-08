@@ -1,4 +1,5 @@
 import Hero from "../component/home/Hero";
+import HowItWorks from "../component/home/HowItWorks";
 import Services from "../component/home/Services";
 import Stats from "../component/home/Stats";
 import Footer from "../component/layout/Footer";
@@ -12,6 +13,7 @@ function home() {
         <Hero />
         <Stats />
         <Services />
+        <HowItWorks />
       </main>
       <Footer />
     </div>
