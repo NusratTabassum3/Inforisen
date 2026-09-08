@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { FaChevronDown, FaChevronUp } from "react-icons/fa6";
+import { FaChevronDown } from "react-icons/fa6";
 import { faqHeader, faqList } from "../../data/faqData";
 import Container from "../common/Container";
 
@@ -23,34 +23,41 @@ const Faq = () => {
         className={`rounded-2xl border transition-all duration-300 overflow-hidden ${
           isOpen
             ? "bg-gradient-to-r from-[#FF9243] via-[#DD6017] to-[#983200] text-white border-orange-500 shadow-md"
-            : "bg-[#F5F5F5] text-gray-800 border-orange-200/60 hover:border-orange-300"
+            : "bg-[#F5F5F5] text-gray-800 border-orange-200/60 hover:border-orange-300 hover:shadow-sm"
         }`}
       >
         <button
           onClick={() => toggleFaq(item.id)}
-          className="w-full p-4 sm:p-5 flex items-center justify-between text-left focus:outline-none"
+          className="w-full p-4 sm:p-5 flex items-center justify-between text-left focus:outline-none transition-colors duration-300"
         >
           <span
-            className={`font-bold text-xs sm:text-sm tracking-tight ${
+            className={`font-bold text-xs sm:text-sm tracking-tight transition-colors duration-300 ${
               isOpen ? "text-white" : "text-gray-800"
             }`}
           >
             {item.question}
           </span>
-          <span className="ml-3 shrink-0 text-xs sm:text-sm">
-            {isOpen ? (
-              <FaChevronUp />
-            ) : (
-              <FaChevronDown className="text-gray-600" />
-            )}
+          <span
+            className={`ml-3 shrink-0 text-xs sm:text-sm transition-transform duration-300 ${
+              isOpen ? "rotate-180 text-white" : "rotate-0 text-gray-600"
+            }`}
+          >
+            <FaChevronDown />
           </span>
         </button>
 
-        {isOpen && (
-          <div className="px-4 sm:px-5 pb-4 sm:pb-5 text-[11px] sm:text-xs leading-relaxed text-orange-50/90 font-normal">
-            {item.answer}
+        {/* Smooth Expand & Collapse Animation Container */}
+        <div
+          className={`grid transition-all duration-300 ease-in-out ${
+            isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
+          }`}
+        >
+          <div className="overflow-hidden">
+            <div className="px-4 sm:px-5 pb-4 sm:pb-5 text-[11px] sm:text-xs leading-relaxed text-orange-50/90 font-normal">
+              {item.answer}
+            </div>
           </div>
-        )}
+        </div>
       </div>
     );
   };
@@ -58,7 +65,7 @@ const Faq = () => {
   return (
     <section className="py-16 sm:py-20 bg-white overflow-hidden">
       <Container>
-        {/* Header Section with Center Dot Line */}
+        {/* Header Section */}
         <div className="text-center max-w-2xl mx-auto mb-12">
           <div className="inline-flex flex-col items-center mb-2">
             <span className="text-orange-500 font-bold text-xs tracking-widest uppercase mb-1">
@@ -79,7 +86,7 @@ const Faq = () => {
           </p>
         </div>
 
-        {/* FAQ 2-Column Grid (Mobile-এ ১ কলাম, Desktop/Tablet-এ ২ কলাম) */}
+        {/* FAQ 2-Column Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-5 max-w-5xl mx-auto">
           <div className="space-y-4">{leftColumn.map(renderFaqCard)}</div>
           <div className="space-y-4">{rightColumn.map(renderFaqCard)}</div>

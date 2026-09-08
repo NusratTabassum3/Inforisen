@@ -4,6 +4,7 @@ import Container from "../common/Container";
 
 // Assets Import
 import girlImage from "../../assets/images/cta/girl.png";
+import mapImage from "../../assets/images/cta/map.png";
 
 const CtaBanner = () => {
   return (
@@ -11,6 +12,13 @@ const CtaBanner = () => {
       <Container>
         {/* Main Banner Card Box */}
         <div className="relative bg-[#FFF8F0] border border-orange-100/80 rounded-3xl p-6 sm:p-10 lg:p-12 overflow-hidden lg:overflow-visible">
+          {/* Background Map Image */}
+          <img
+            src={mapImage}
+            alt="World Map Background"
+            className="absolute inset-0 w-full h-full object-contain opacity-40 pointer-events-none z-0"
+          />
+
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
             {/* Left Content (Text + Buttons) */}
             <div className="lg:col-span-8 max-w-xl">
@@ -46,7 +54,7 @@ const CtaBanner = () => {
               <img
                 src={girlImage}
                 alt="Growth Consultant"
-                className="w-full max-w-[260px] sm:max-w-[280px] lg:max-w-[320px] h-auto object-contain lg:absolute lg:bottom-0 lg:right-2 lg:translate-y-40 drop-shadow-md"
+                className="w-full max-w-[260px] sm:max-w-[280px] lg:max-w-[320px] h-auto object-contain lg:absolute lg:bottom-0 lg:right-2 lg:translate-y-40 drop-shadow-md z-10"
                 onError={(e) => {
                   e.target.style.display = "none";
                 }}
