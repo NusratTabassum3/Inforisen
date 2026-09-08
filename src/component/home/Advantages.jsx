@@ -8,7 +8,7 @@ const Advantages = () => {
         {/* Header Section */}
         <div className="text-center max-w-2xl mx-auto mb-12 sm:mb-16">
           <div className="inline-flex flex-col items-center mb-2">
-            <span className="text-orange-500 font-extrabold text-xs tracking-widest uppercase mb-1">
+            <span className="text-orange-500 font-bold text-xs tracking-widest uppercase mb-1">
               {advantagesHeader.eyebrow}
             </span>
             <div className="relative flex items-center justify-center w-16 h-1">

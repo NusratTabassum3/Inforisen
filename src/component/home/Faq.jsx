@@ -4,14 +4,12 @@ import { faqHeader, faqList } from "../../data/faqData";
 import Container from "../common/Container";
 
 const Faq = () => {
-  // প্রথম প্রশ্নটি বাই-ডিফল্ট ওপেন থাকবে (ছবি অনুযায়ী)
   const [openId, setOpenId] = useState(1);
 
   const toggleFaq = (id) => {
     setOpenId(openId === id ? null : id);
   };
 
-  // প্রশ্নগুলোকে ২ কলামে ভাগ করা (বাম ও ডান পাশ)
   const halfLength = Math.ceil(faqList.length / 2);
   const leftColumn = faqList.slice(0, halfLength);
   const rightColumn = faqList.slice(halfLength);
@@ -63,7 +61,7 @@ const Faq = () => {
         {/* Header Section with Center Dot Line */}
         <div className="text-center max-w-2xl mx-auto mb-12">
           <div className="inline-flex flex-col items-center mb-2">
-            <span className="text-orange-500 font-extrabold text-xs tracking-widest uppercase mb-1">
+            <span className="text-orange-500 font-bold text-xs tracking-widest uppercase mb-1">
               {faqHeader.eyebrow}
             </span>
             <div className="relative flex items-center justify-center w-16 h-1">
