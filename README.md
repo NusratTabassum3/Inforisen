@@ -37,6 +37,7 @@ easy to maintain.
 - **HTML5**
 - **CSS3**
 - **Git & GitHub**
+- **Framer-motion**
 
 ## 📁 Project Structure
 
