@@ -27,7 +27,7 @@ function Navbar() {
                 key={item.name}
                 href={item.href}
                 onClick={() => setActiveNav(item.name)}
-                className={`text-sm font-semibold transition-all duration-200 hover:-translate-y-0.5 ${
+                className={`text-sm font-medium transition-all duration-200 hover:-translate-y-0.5 ${
                   isActive
                     ? "text-orange-500"
                     : "text-gray-700 hover:text-orange-500"
@@ -43,7 +43,7 @@ function Navbar() {
         <div className="hidden items-center gap-3 md:flex">
           <Button
             variant="outline"
-            className="rounded-xl border-orange-500 bg-white px-5 py-2.5 text-xs font-semibold text-orange-500 shadow-sm transition-all duration-200 hover:bg-orange-50 active:scale-95"
+            className="rounded-xl border-orange-500 bg-white px-5 py-2.5 text-xs font-medium text-orange-500 shadow-sm transition-all duration-200 hover:bg-orange-50 active:scale-95"
           >
             Sign In
           </Button>
