@@ -39,6 +39,11 @@ easy to maintain.
 - **Git & GitHub**
 - **Framer-motion**
 
+## 🚀 Live Project
+
+[View Live Project](https://eloquent-moxie-5ab6ad.netlify.app/)
+
+
 ## 📁 Project Structure
 
 ```text
